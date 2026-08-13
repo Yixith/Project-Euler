@@ -5,23 +5,10 @@
 # Jeżeli dzielnik jest w dalszej części listy, odrzuć jego pozostałe wystąpienia.
 
 
-def divisors(number):
-    table = [val for val in range(11) if val % 2 == 0]
-    # table = []
-    # for i in range(number,1,-1):
-    #     if number % i == 0:
-    #         table.append(i)
-    # return table
 
 
 
 
-print(divisors(10))
-
-# num = 10
-# num_list = [x for x in range(num,0,-1)]
-# div_list = []
-# print(num_list)
 
 
 

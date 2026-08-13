@@ -17,20 +17,20 @@
 
 def count_divisors(number):
     '''Counts divisors of given number'''
-    counter = 0
-    for i in range(1,number + 1):
+    counter = 1
+    for i in range(1,(number + 1)//2):
         if number % i == 0:
             counter += 1
     return counter
 
-n = 2
-number = 1
-while(True):
-    if count_divisors(number) > 500:
-        print(n-1, number)
-        break
-    else:
-        number = number + n
-        n = n + 1
-        print(n+1, number)
+# n = 2
+# number = 1
+# while(True):                                                  # TOO
+#     if count_divisors(number) > 500:                          # LONG       
+#         print(n-1, number)
+#         break
+#     else:
+#         number = number + n
+#         n = n + 1
+#         print(n+1, number)
 

@@ -9,22 +9,29 @@
 #  Which starting number, under one million, produces the longest chain? 
 #  NOTE: Once the chain starts the terms are allowed to go above one million. 
 
-base = 
+base = {1:4, 2:1, 4:2, 13:40}
+
 def collatz(number):
-    sequence = [number]
     while number > 1:
-        if number % 2 == 0:
-            number = number / 2
-            sequence.append(number)
+        if number in base:
+            break
+        elif number % 2 == 0:
+            base.update({number: int(number/2)})
+            number = int(number / 2)        
         else:
-            number = 3 * number + 1
-            sequence.append(number)
-    return sequence, len(sequence)
+            base.update({number: int(3 * number + 1)})
+            number = int(3 * number + 1)
+
+        # return number
+            
+for i in range(999999,1, -1):
+    collatz(i)
+print(base)
 
 
-# base = {1:(4,0), 2:(1,1), 4:(2,2), 13:(40,9)}
+
 
 # for i in range(999999, 1, -1):
-print(collatz(999999))
+
 
     
